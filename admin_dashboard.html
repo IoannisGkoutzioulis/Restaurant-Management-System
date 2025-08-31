@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - The Urban Table</title>
+  <link rel="stylesheet" href="style_apopsi.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="restaurant-background">
+    <div class="d-flex nav-buttons_restuarant">
+      <a href="homepage.HTML" class="nav-link">Home</a>
+      <a href="reservations.html" class="nav-link">Reservation</a>
+      <a href="Order.html" class="nav-link">Order</a>
+      <a href="#admin" class="nav-link">Admin</a>
+      <a href="#" class="nav-link" id="adminLogout">Logout</a>
+    </div>
+
+    <div class="adjust-title">
+      <div class="container title">
+        <h1 class="change-h1">Admin Dashboard</h1>
+        <h3 class="change-h3 typing">Manage reservations, orders, inventory, and staff</h3>
+      </div>
+    </div>
+
+    <div class="container setCenter">
+      <div class="reservation-container">
+        <h2 class="color-font">Upcoming Reservations</h2>
+        <div id="adminReservationsList">Loading...</div>
+      </div>
+    </div>
+
+    <div class="container setCenter">
+      <div class="reservation-container">
+        <h2 class="color-font">Live Order Management</h2>
+        <div id="orderManagement">
+            <h3>Enter New Order</h3>
+            <form id="orderForm">
+            <input type="number" id="tableNumber" placeholder="Table #" required><br><br>
+            <input type="text" id="itemsOrdered" placeholder="Items (comma-separated)" required><br><br>
+            <input type="text" id="quantities" placeholder="Quantities (comma-separated)" required><br><br>
+            <input type="text" id="specialRequest" placeholder="Special Requests"><br><br>
+            <button type="submit">Submit Order</button>
+                        </form>
+
+            <h3>Live Orders</h3>
+            <ul id="liveOrderList">Loading orders...</ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container setCenter">
+      <div class="reservation-container">
+        <h2 class="color-font">Inventory Management</h2>
+        <div id="inventorySection">
+            <h3>Add New Inventory Item</h3>
+                <form id="inventoryForm">
+                <input type="text" id="itemName" placeholder="Item Name" required><br><br>
+                <input type="number" id="itemQty" placeholder="Quantity" required><br><br>
+                <input type="number" id="reorderLevel" placeholder="Reorder Level" required><br><br>
+                <input type="text" id="supplier" placeholder="Supplier Info"><br><br>
+                <button type="submit">Add Item</button>
+                </form>
+
+                <h3>Current Inventory</h3>
+                <ul id="inventoryList">Loading inventory...</ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container setCenter">
+      <div class="reservation-container">
+        <h2 class="color-font">Staff Scheduling</h2>
+        <div id="staffSchedule">
+            <h3>Add Staff Schedule</h3>
+            <form id="staffForm">
+              <input type="text" id="staffName" placeholder="Name" required><br><br>
+              <input type="text" id="staffPosition" placeholder="Position (e.g. Chef, Waiter)" required><br><br>
+              <input type="text" id="staffShift" placeholder="Shift Time (e.g. 10:00-16:00)" required><br><br>
+              <input type="number" id="staffHours" placeholder="Hours Worked" required><br><br>
+              <button type="submit">Add Schedule</button>
+            </form>
+            
+            <h2 class="color-font">Staff Time-Off / Schedule Change Request</h2>
+            <form action="/admin/submit-request" method="POST" id="requestForm">
+              <input type="number" name="staff_id" placeholder="Staff ID" required><br><br>
+        
+              <label>Request Type:</label>
+              <select name="request_type" required>
+                <option value="Time-Off">Time-Off</option>
+                <option value="Schedule Change">Schedule Change</option>
+              </select><br><br>
+        
+              <label>Date:</label>
+              <input type="date" name="requested_date" required><br><br>
+        
+              <label>Shift Change (Optional):</label>
+              <input type="time" name="shift_change_from"> to
+              <input type="time" name="shift_change_to"><br><br>
+        
+              <textarea name="reason" placeholder="Reason for request" required></textarea><br><br>
+        
+              <button type="submit">Submit Request</button>
+            </form>
+            
+            
+
+            <h3>Current Staff Schedule</h3>
+            <table border="1" cellpadding="10" cellspacing="0" style="margin-top: 20px; width: 100%; text-align: left;">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Shift Time</th>
+                  <th>Hours Worked</th>
+                </tr>
+              </thead>
+              <tbody id="staffList">
+                <!--  SQL -->
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>The Urban Table</h3>
+        <p>Admin tools for managing restaurant operations efficiently.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 The Urban Table | Admin Panel</div>
+  </footer>
+
+  <script src="admin_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+  {
+    "username": "testuser",
+    "password": "$2b$10$FAFbTu9xTmLS18erDorde.1.ozU2qeKKYzh.IfWEEU4Pi0XKxqzHG"
+  },
+  {
+    "username": "dimitris",
+    "password": "$2b$10$PVBH6cbRdE/XumHSznaqgu7ErsJdPUQY2tk9NZTUgiZbji7N6IXGK"
+  },
+  {
+    "username": "MARIA",
+    "password": "$2b$10$.eAYTlf0Y2lWfNLRRty3BOWqJIbZtDcbEUHnXBfEfcTiApe1TO1bW"
+  },
+  {
+    "username": "γιανναρας",
+    "password": "$2b$10$aV9EVmQW4ukP1dqQKrhgeeSnugs.2PLpcaishUZ1EfN4.63U.G8SS"
+  },
+  {
+    "username": "giannis",
+    "password": "$2b$10$LGxetVy/SPGBuo9fD.O/nesBLk4tAmUX3nOa3XQvG/jnN7Ia1FDNq"
+  },
+  {
+    "username": "gabriel",
+    "password": "$2b$10$uBje4TGkiSA2DtPdlVKrFuZqG06obh9t/ZCZvyxDQLe00nwbqRvr2"
+  },
+  {
+    "username": "John",
+    "password": "$2b$10$hymOJutlpw7OfBscps2U7uR2k/Wyd/6M0pB6F065JUDfiR.0bqO.S"
+  },
+  {
+    "username": "IoannisGk",
+    "password": "$2b$10$MndjJ62ewUiEPIid.eS7MuNbfBdwERm/dLYrTicqNNgJdMUciF8tq"
+  }
+]

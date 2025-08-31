@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Restaurant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style_apopsi.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+     
+<div class="restaurant-background">   
+    <div class="d-flex nav-buttons">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#reservation" class="nav-link" onclick="window.location.href='reservations.html'">Reservation</a>
+            <a href="#order" class="nav-link"onclick="window.location.href='Order.html'">Order</a>
+        
+            <a href="#" class="nav-link" onclick="document.getElementById('adminAuthModal').style.display = 'flex'">Admin</a>
+    </div>
+        <div class="adjust-title">
+            <div class="container title">
+                    <h1 class="change-h1">The Urban Table</h1>
+                    <h3 class="change-h3 typing">Taste flavors you never knew existed...</h3>
+                </div>
+        </div>
+        <!--cars for foods-->
+            <p class="paragraph_set">Have a look at some of our special dishes, made by us!</p>
+            
+            <div class="card-container card_settings">
+                <div class="card" data-modal-text="Description: Tender, slow-braised short rib served over creamy truffle-infused mashed potatoes with a red wine reduction.
+                Why? It’s a rich, flavorful dish that feels upscale but is universally loved.">
+                <img src="photos/Braised_Short_Rib.jpg.webp" alt="Card 1">
+                <h2>Braised Short Rib with Truffle Mashed Potatoes</h2>
+                <h3>Click to view</h3>
+                </div>
+               
+                <div class="card" data-modal-text="Description: Juicy, grilled lamb chops topped with a vibrant mint chimichurri, served with roasted baby potatoes.
+                Why? It’s bold and sophisticated, fitting for an urban dining experience">>
+                <img src="/photos/Grilled_Lamb_Chops.jpg" alt="Card 2">
+                <h2>Grilled Lamb Chops with Mint Chimichurri</h2>
+                <h3>Click to view</h3>
+                </div>
+               
+                <div class="card" data-modal-text="Description: Pan-seared salmon with a crispy herb crust, served with lemon-drizzled asparagus and a light dill sauce.
+                Why? Fresh, healthy, and elegant – perfect for a modern, professional menu.">
+                <img src="photos/Herb-Crusted Salmon with Lemon Asparagus.webp" alt="Card 3">
+                <h2>Herb-Crusted Salmon with Lemon Asparagus</h2>
+                <h3>Click to view</h3>
+                </div>
+                
+                <div class="card" data-modal-text="Description: Tender chicken breast coated in a pistachio crust, drizzled with honey mustard glaze, served with roasted seasonal vegetables.
+                Why? Unique, yet familiar – a classy twist on a favorite protein.">
+                <img src="photos/Pistachio-Crusted Chicken with Honey Mustard Glaze.jpg" alt="Card 4">
+                <h2>Pistachio-Crusted Chicken with Honey Mustard Glaze</h2>
+                <h3>Click to view</h3>
+                </div>
+               
+                <div class="card" data-modal-text="Description: Gourmet beef patty topped with caramelized onions, smoked Gouda, arugula, and truffle aioli, served on a brioche bun with truffle fries.
+                Why? Every modern restaurant needs a signature burger, and this one balances casual and upscale perfectly.">
+                <img src="photos/Signature Urban Burger.jpg" alt="Card 5">
+                <h2>Signature Urban Burger</h2>
+                <h3>Click to view</h3>
+                </div>
+                
+                <div class="card" data-modal-text="Description: Creamy arborio rice infused with Parmesan, sautéed wild mushrooms, and white truffle oil.
+                Why? It’s a vegetarian option that feels luxurious and flavorful.">
+                <img src="photos/Wild Mushroom Risotto.webp" alt="Card 6">
+                <h2>Wild Mushroom Risotto</h2>
+                <h3>Click to view</h3>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p id="modalText"></p>
+                    </div>
+                </div>
+            
+                
+            </div>
+       
+            <!--admin modal-->
+            <div id="adminAuthModal" class="modal testlogin" style="display: none;">
+              <div class="modal-contentLogin">
+                <h2 id="adminModalTitle">Admin Login</h2>
+                
+                <div class="form-container" id="adminLoginForm" style="display: block;">
+                  <input type="text" id="adminLoginUsername" placeholder="Username" required>
+                  <input type="password" id="adminLoginPassword" placeholder="Password" required>
+                  <button id="adminLoginSubmit">Login</button> 
+                  <p>Don't have an account? <span class="colorSign" id="toggleAdminForms">Sign Up</span></p>
+                  <button class="backToHome back-button">Back</button>
+                </div>
+            
+                <div class="form-container" id="adminSignupForm" style="display: none;">
+                  <input type="text" id="adminSignupUsername" placeholder="Username" required>
+                  <input type="password" id="adminSignupPassword" placeholder="Password" required>
+                  <button id="adminSignupSubmit">Sign Up</button> 
+                  <p>Already have an account? <span class="colorLogin" id="toggleAdminForms">Login</span></p>
+                  <button class="backToHome back-button">Back</button>
+                </div>
+              </div>
+            </div>
+            
+        
+
+       
+
+
+
+
+
+
+
+
+
+
+</div> 
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>The Urban Table</h3>
+        <p>Experience a modern twist on classic flavors. At The Urban Table, we serve fresh, locally-sourced dishes with a touch of sophistication.</p>
+      </div>
+      
+      
+      <div class="footer-section contact">
+        <h4>Contact Us</h4>
+        <p>📍 123 Main Street, Cityville</p>
+        <p>📞 (123) 456-7890</p>
+        <p>📧 info@theurbantable.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 The Urban Table | Designed with efficiency by The best Derby Students.
+    </div>
+  </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>      
+        <script src="scriptara.js"></script>  
+        <script src="admin_login.js"></script>
+    </body>
+</html>
